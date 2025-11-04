@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Obsidian Dark Theme Colors -->
+    <color name="obsidian_background">#191919</color> <!-- Тёмный фон -->
+    <color name="obsidian_surface">#2d2d2d</color> <!-- Карточки/элементы -->
+    <color name="obsidian_text_primary">#e8e6e3</color> <!-- Основной текст -->
+    <color name="obsidian_text_secondary">#a0a0a0</color> <!-- Вторичный текст -->
+    <color name="obsidian_accent">#5a67d8</color> <!-- Синий акцент для кнопок -->
+    <color name="obsidian_border">#404040</color> <!-- Границы -->
+    <color name="green_correct">#4ade80</color>
+    <color name="red_wrong">#f87171</color>
+</resources>

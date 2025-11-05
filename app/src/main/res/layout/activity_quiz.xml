@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/obsidian_background"
+    android:padding="24dp">
+
+    <!-- ЭКРАН ВОПРОСА -->
+    <LinearLayout
+        android:id="@+id/questionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Вопрос -->
+        <TextView
+            android:id="@+id/questionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Вопрос?"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/obsidian_text_primary"
+            android:lineSpacingExtra="8dp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- RadioGroup с карточками -->
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <!-- Сообщение об ошибке -->
+        <TextView
+            android:id="@+id/errorText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Пожалуйста, выберите ответ"
+            android:textColor="#ff6b6b"
+            android:visibility="gone"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Кнопка "Далее" -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/nextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Далее"
+            android:textColor="@color/white"
+            app:backgroundTint="@color/obsidian_accent"
+            app:cornerRadius="8dp" />
+
+    </LinearLayout>
+
+    <!-- ЭКРАН РЕЗУЛЬТАТА -->
+    <LinearLayout
+        android:id="@+id/resultLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Тест завершён!"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/obsidian_text_primary"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 из 0"
+            android:textSize="22sp"
+            android:textColor="@color/obsidian_accent"
+            android:layout_marginBottom="32dp" />
+
+        <!-- ЗДЕСЬ ИЗМЕНЕНИЕ: заменил restartButton на backToMenuButton -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/backToMenuButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="В главное меню"
+            app:backgroundTint="@color/obsidian_accent"
+            app:cornerRadius="8dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

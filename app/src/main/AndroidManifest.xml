@@ -10,16 +10,24 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.MyQuizApp">
+        android:theme="@style/Theme.MyQuizApp"
+        tools:targetApi="31">
+
+        <!-- Главное меню -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Экран тестирования - ДОБАВЬ ЭТО -->
+        <activity
+            android:name=".QuizActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
